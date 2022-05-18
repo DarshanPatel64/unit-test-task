@@ -68,7 +68,7 @@ namespace StudentDataUnitTest
         }
 
         [Test]
-        public void GetStudentsById_WhenInValidIdPassed_ShouldReturnOnerecords()
+        public void GetStudentsById_WhenInValidIdPassed_ShouldReturnNotFound()
         {
             var result = studentController.GetStudentWithId(9);
 
@@ -97,7 +97,7 @@ namespace StudentDataUnitTest
             Assert.IsInstanceOf<OkResult>(result);
         }
         [Test]
-        public void deleteStudent_whenInValidIdPassed_ShouldDeleteStudent()
+        public void deleteStudent_whenInValidIdPassed_ShouldReturnNotFound()
         {
             var result = studentController.deleteStudent(111);
             Assert.IsInstanceOf<NotFoundResult>(result);
